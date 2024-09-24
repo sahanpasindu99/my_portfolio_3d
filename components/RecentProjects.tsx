@@ -3,6 +3,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   const linktoproject = (url: string) => {
@@ -31,11 +32,13 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <img src="/bg.png" alt="bgimg" />
+                    <Image src="/bg.png" alt="bg" width={100} height={100} />
                   </div>
-                  <img
+                  <Image
                     src={item.img}
                     alt="cover"
+                    layout="fill" // Makes the image fill its parent container
+                    objectFit="cover" // Ensures the image maintains aspect ratio and covers the container
                     className="absolute z-10 transform rotate-2 bottom-0"
                   />
                 </div>
@@ -64,7 +67,13 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon5" className="p-2" />
+                        <Image
+                          src={icon}
+                          alt="icon5"
+                          className="p-2"
+                          width={100}
+                          height={100}
+                        />
                       </div>
                     ))}
                   </div>
