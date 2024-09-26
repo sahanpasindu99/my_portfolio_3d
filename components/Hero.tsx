@@ -1,13 +1,26 @@
 "use client";
+import { useLayoutEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { motion, useAnimate } from "framer-motion";
 import { Button } from "./ui/MovingBorders";
-import { motion } from "framer-motion";
+
 const Hero = () => {
+  const [scope, animate] = useAnimate();
+
+  // Ensure scope is passed correctly to animate
+  useLayoutEffect(() => {
+    animate(
+      scope.current.querySelectorAll("p"), // Target all <p> tags within the scope
+      { opacity: 1, y: 0 },
+      { duration: 1, delay: 0.5 }
+    );
+  }, [scope, animate]);
+
   return (
-    <div className="relative pb-20 pt-36 overflow-hidden">
+    <div className="relative pb-20 pt-36 overflow-hidden" ref={scope}>
       {/* Spotlights */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <Spotlight

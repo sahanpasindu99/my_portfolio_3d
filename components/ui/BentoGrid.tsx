@@ -7,7 +7,6 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
-// Dynamically import GridGlobe
 const GridGlobe = dynamic(() => import("./GridGlobe"), {
   ssr: false,
 });
