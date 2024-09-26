@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import { IoCopyOutline } from "react-icons/io5";
