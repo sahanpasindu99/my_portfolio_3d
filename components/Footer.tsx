@@ -17,9 +17,8 @@ const Footer = () => {
           <h1 className="text-3xl font-bold mb-4">
             "In the ever-evolving tech landscape, Sahan strives to
             <span className="text-green-400">
-              {" "}
               create seamless user experiences
-            </span>{" "}
+            </span>
             that empower individuals and businesses alike."
           </h1>
           <p className="text-gray-600">
