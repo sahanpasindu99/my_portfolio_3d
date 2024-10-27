@@ -39,8 +39,8 @@ export const PinContainer = ({
     >
       <div
         style={{
-          perspective: "1000px",
-          transform: "rotateX(70deg) translateZ(0deg)",
+          perspective: "500px",
+          transform: "rotateX(30deg) translateZ(0deg)",
         }}
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
       >
@@ -54,7 +54,7 @@ export const PinContainer = ({
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      {/* <PinPerspective title={title} href={href} /> */}
     </div>
   );
 };

@@ -9,40 +9,60 @@ const Footer = () => {
   const linktoproject = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
+
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <a href="mailto:sahanpasindu700@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
+    <footer className="w-full py-20" id="contact">
+      <div className="container mx-auto flex flex-col items-center">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold mb-4">
+            "In the ever-evolving tech landscape, Sahan strives to
+            <span className="text-green-400">
+              {" "}
+              create seamless user experiences
+            </span>{" "}
+            that empower individuals and businesses alike."
+          </h1>
+          <p className="text-gray-600">
+            Your success is just an email away.reach out to discuss!
+          </p>
+        </div>
+        <a href="mailto:sahanpasindu700@gmail.com" className="mb-10">
+          {/* <MagicButton
+            title="Connect with me"
             icon={<FaLocationArrow />}
             position="right"
-          />
+          /> */}
+          <button className="relative flex items-center gap-2 px-12 py-3 text-white font-semibold rounded-md bg-gradient-to-r from-green-400 to-green-600 shadow-lg hover:shadow-green-500/60 transition duration-300 ease-in-out">
+            Connect with me!
+            <FaLocationArrow className="text-white" />
+            <span className="absolute inset-0 rounded-full bg-green-400 opacity-20 blur-md animate-pulse"></span>
+          </button>
         </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Sahan Nawarathne
-        </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-              onClick={() => linktoproject(info.link)}
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full md:max-w-2xl">
+          <div className="flex justify-center">
+            <p className="text-gray-600 font-light text-sm md:text-base">
+              © 2024 Sahan Nawarathne. All rights reserved.
+            </p>
+          </div>
+
+          <div className="flex justify-center md:justify-end gap-6">
+            {socialMedia.map((info) => (
+              <div
+                key={info.id}
+                className="w-10 h-10 flex justify-center items-center rounded-full border border-gray-300 hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                onClick={() => linktoproject(info.link)}
+              >
+                <img
+                  src={info.img}
+                  alt="icons"
+                  width={20}
+                  height={20}
+                  className="transition-transform duration-200 hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

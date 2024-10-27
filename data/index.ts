@@ -4,7 +4,7 @@ export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
-  { name: "Contact", link: "#contact" },
+  { name: "Skills", link: "#skills" },
 ];
 
 export const gridItems = [
@@ -182,7 +182,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Software Engineer Intern",
-    desc: "Engaged in the development of a web-based platform using MERN stack, NextJs, enhancing interactivity.",
+    desc: "Engaged in the development of a real-time projects using technologies like MERN stack, NextJs, Cloud services and etc. enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -203,7 +203,7 @@ export const workExperience = [
   {
     id: 4,
     title: "AI/ML Intern",
-    desc: "Developed and maintained AI solutions as a contract-based intern in indian company.",
+    desc: "Developed and maintained AI solutions (LLMs, Large Dataset Handling) as a contract-based intern in indian company.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

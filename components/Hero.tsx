@@ -1,43 +1,78 @@
 "use client";
-import { useLayoutEffect } from "react";
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+
+import { useLayoutEffect, useRef } from "react";
+import { FaLocationArrow, FaDownload } from "react-icons/fa6";
+import * as THREE from "three"; // Import Three.js
 import { motion, useAnimate } from "framer-motion";
 import { Button } from "./ui/MovingBorders";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const [scope, animate] = useAnimate();
+  const canvasRef = useRef<HTMLCanvasElement | null>(null); // Type definition for canvasRef
 
   // Ensure scope is passed correctly to animate
   useLayoutEffect(() => {
-    animate(
-      scope.current.querySelectorAll("p"), // Target all <p> tags within the scope
-      { opacity: 1, y: 0 },
-      { duration: 1, delay: 0.5 }
-    );
+    animate(scope.current?.querySelectorAll("p"), { duration: 1, delay: 0.5 });
   }, [scope, animate]);
+
+  // Function to create the star field
+  const createStarField = () => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvasRef.current!,
+      alpha: true,
+    }); // Enable alpha for transparency
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000, 0); // Set clear color to transparent
+
+    // Create stars
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+
+    const starsCount = 1000;
+    const positions = new Float32Array(starsCount * 3);
+
+    for (let i = 0; i < starsCount; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 2000; // x
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 2000; // y
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 2000; // z
+    }
+
+    starsGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(positions, 3)
+    );
+    const stars = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(stars);
+
+    camera.position.z = 5;
+
+    // Animation function
+    const animate = () => {
+      requestAnimationFrame(animate);
+      stars.rotation.y += 0.001; // Rotate the stars
+      renderer.render(scene, camera);
+    };
+
+    animate();
+  };
+
+  useLayoutEffect(() => {
+    if (canvasRef.current) {
+      createStarField(); // Create stars only if the canvas is available
+    }
+  }, []);
 
   return (
     <div className="relative pb-20 pt-36 overflow-hidden" ref={scope}>
-      {/* Spotlights */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
-
-      {/* Grid Background */}
-      <div className="absolute inset-0 z-0 dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]">
-        <div className="absolute inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-      </div>
+      {/* Canvas for Three.js with transparent background */}
+      <canvas ref={canvasRef} className="absolute inset-0 z-0"></canvas>
 
       {/* Main Content */}
       <div className="relative z-10 flex justify-center mt-8 mb-20">
@@ -70,27 +105,34 @@ const Hero = () => {
             Sahan Nawarathne
           </motion.p>
 
-          {/* Main Title */}
-          <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
-
           {/* Subtitle */}
-          <p className="text-center tracking-wider mb-4 mt-2 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center tracking-wider mb-4 mt-2 text-sm md:text-lg lg:text-4xl">
             Hi! I&apos;m{" "}
-            <span className="text-purple font-semibold">SAHAN</span>, a Software
-            Engineer based in Sri Lanka.
+            <span className="text-green-400 font-semibold">SAHAN</span>, an
+            experienced Software Engineer.
           </p>
 
           {/* Call-to-Action Button */}
-          <a href="#about">
-            <MagicButton
-              position="right"
-              title="Show my work"
-              icon={<FaLocationArrow />}
-            />
-          </a>
+          <div className="flex gap-4 items-center">
+            <a href="#contact" className="mt-6">
+              <button className="relative flex items-center gap-2 px-12 py-3 text-white font-semibold rounded-md bg-gradient-to-r from-green-400 to-green-600 shadow-lg hover:shadow-green-500/60 transition duration-300 ease-in-out">
+                Hire Me
+                <FaLocationArrow className="text-white" />
+                <span className="absolute inset-0 rounded-full bg-green-400 opacity-20 blur-md animate-pulse"></span>
+              </button>
+            </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1zBwYy61sgTwXUJs1kE4E1LpI5WpinWcI"
+              download="Sahan_Nawarathne_CV"
+              className="mt-6"
+            >
+              <button className="relative flex items-center gap-2 px-12 py-3 text-white font-semibold rounded-md border-2 border-green-400 hover:border-green-600 transition duration-300 ease-in-out bg-transparent">
+                Download CV
+                <FaDownload className="text-green-400" />
+                <span className="absolute inset-0 rounded-md border-green-400 opacity-30 blur-sm animate-pulse"></span>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
