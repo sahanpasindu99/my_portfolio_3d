@@ -15,11 +15,11 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold mb-4">
-            "In the ever-evolving tech landscape, Sahan strives to
+            In the ever-evolving tech landscape, We strive to
             <span className="text-green-400">
               create seamless user experiences
             </span>
-            that empower individuals and businesses alike."
+            that empower individuals and businesses alike.
           </h1>
           <p className="text-gray-600">
             Your success is just an email away.reach out to discuss!
