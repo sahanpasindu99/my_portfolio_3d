@@ -109,13 +109,13 @@ const Hero: React.FC = () => {
           <p className="text-center tracking-wider mb-4 mt-2 text-sm md:text-lg lg:text-4xl">
             Hi! I&apos;m{" "}
             <span className="text-green-400 font-semibold">SAHAN</span>, an
-            experienced Software Engineer.
+            experienced Software Engineer based in SriLanka.
           </p>
 
           {/* Call-to-Action Button */}
           <div className="flex gap-4 items-center">
             <a href="#contact" className="mt-6">
-              <button className="relative flex items-center gap-2 px-12 py-3 text-white font-semibold rounded-md bg-gradient-to-r from-green-400 to-green-600 shadow-lg hover:shadow-green-500/60 transition duration-300 ease-in-out">
+              <button className="relative flex items-center gap-2 px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base lg:px-12 lg:py-3 lg:text-lg text-white font-semibold rounded-md bg-gradient-to-r from-green-400 to-green-600 shadow-lg hover:shadow-green-500/60 transition duration-300 ease-in-out">
                 Hire Me
                 <FaLocationArrow className="text-white" />
                 <span className="absolute inset-0 rounded-full bg-green-400 opacity-20 blur-md animate-pulse"></span>
@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
               download="Sahan_Nawarathne_CV"
               className="mt-6"
             >
-              <button className="relative flex items-center gap-2 px-12 py-3 text-white font-semibold rounded-md border-2 border-green-400 hover:border-green-600 transition duration-300 ease-in-out bg-transparent">
+              <button className="relative flex items-center gap-2 px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base lg:px-12 lg:py-3 lg:text-lg text-white font-semibold rounded-md border-2 border-green-400 hover:border-green-600 transition duration-300 ease-in-out bg-transparent">
                 Download CV
                 <FaDownload className="text-green-400" />
                 <span className="absolute inset-0 rounded-md border-green-400 opacity-30 blur-sm animate-pulse"></span>
