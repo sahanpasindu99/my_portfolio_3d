@@ -6,10 +6,20 @@ import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
+  const getCurrentExperience = () => {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const startYear = 2024;
+    return currentYear - startYear;
+  };
+
   return (
     <div className="py-20 w-full " id="experience">
       <h1 className="heading">
-        My <span className="text-green-400">work experience</span>
+        My{" "}
+        <span className="text-green-400">
+          work experience ({getCurrentExperience()} years)
+        </span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">

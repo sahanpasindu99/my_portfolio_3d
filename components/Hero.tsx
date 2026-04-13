@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current!,
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
 
     starsGeometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(positions, 3)
+      new THREE.BufferAttribute(positions, 3),
     );
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
@@ -108,8 +108,8 @@ const Hero: React.FC = () => {
           {/* Subtitle */}
           <p className="text-center tracking-wider mb-4 mt-2 text-sm md:text-lg lg:text-4xl">
             Hi! I&apos;m{" "}
-            <span className="text-green-400 font-semibold">SAHAN</span>, an
-            experienced Software Engineer based in SriLanka.
+            <span className="text-green-400 font-semibold">SAHAN</span>, a
+            Software Engineer with 2 Years of experience based in SriLanka.
           </p>
 
           {/* Call-to-Action Button */}

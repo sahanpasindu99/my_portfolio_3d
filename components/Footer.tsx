@@ -10,14 +10,16 @@ const Footer = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="w-full py-20" id="contact">
       <div className="container mx-auto flex flex-col items-center">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold mb-4">
-            In the ever-evolving tech landscape, We strive to
+            In the ever-evolving tech landscape, We strive to{" "}
             <span className="text-green-400">
-              create seamless user experiences
+              create seamless user experiences{" "}
             </span>
             that empower individuals and businesses alike.
           </h1>
@@ -41,7 +43,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full md:max-w-2xl">
           <div className="flex justify-center">
             <p className="text-gray-600 font-light text-sm md:text-base">
-              © 2024 Sahan Nawarathne. All rights reserved.
+              © {currentYear} Sahan Nawarathne. All rights reserved.
             </p>
           </div>
 

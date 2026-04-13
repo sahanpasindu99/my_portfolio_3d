@@ -23,19 +23,22 @@ import {
   SiTailwindcss,
   SiCsharp,
   SiPython,
+  SiRedis,
 } from "react-icons/si";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const skills = [
+  { name: "React Native", icon: <FaReact className="text-blue-300" /> },
   { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
+  { name: "Python", icon: <SiPython className="text-yellow-400" /> },
+  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+  { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+  { name: "AWS", icon: <FaAws className="text-orange-400" /> },
   { name: "React JS", icon: <FaReact className="text-blue-300" /> },
   { name: "Next Js", icon: <SiNextdotjs className="text-gray-400" /> },
-  { name: "GitHub", icon: <FaGithub className="text-gray-400" /> },
   { name: "Node JS", icon: <FaNodeJs className="text-green-500" /> },
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-  { name: "AWS", icon: <FaAws className="text-orange-400" /> },
   { name: "NestJS", icon: <SiNestjs className="text-red-500" /> },
   { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
@@ -45,7 +48,6 @@ const skills = [
   { name: "Tailwind", icon: <SiTailwindcss className="text-blue-400" /> },
   { name: "C#", icon: <SiCsharp className="text-purple-500" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
-  { name: "Python", icon: <SiPython className="text-yellow-400" /> },
 ];
 
 const SkillsComponent = () => {
@@ -73,7 +75,7 @@ const SkillsComponent = () => {
   // Calculate the skills to display for the current page
   const currentSkills = skills.slice(
     currentPage * skillsPerPage,
-    (currentPage + 1) * skillsPerPage
+    (currentPage + 1) * skillsPerPage,
   );
 
   // Function to scroll up

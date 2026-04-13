@@ -74,14 +74,22 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "ShopeeLand",
-    des: "Shopeeland is ecommerce website that enriched with modern UI and uses state management like Redux Toolkit to flow data between components seamlessly.",
-    img: "/shopeeland.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/redux.svg"],
+    title: "DEEPSKIN AI", //EARLY SKIN CANCER DETECTION
+    des: "DEEPSKIN  is an early skin cancer detection platform that leverages advanced AI algorithms to provide accurate and timely diagnoses.",
+    img: "/deepskin.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/redux.svg"],
     link: "https://github.com/sahanpasindu99",
   },
   {
     id: 2,
+    title: "TurtlesEgg - Mobile App",
+    des: "TurtlesEgg is a Ecommerce platform that provides a seamless shopping experience for users.",
+    img: "/TURTLESEGG-MOCK.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/redux.svg"],
+    link: "https://github.com/sahanpasindu99",
+  },
+  {
+    id: 3,
     title: "Fashion E-commerce",
     des: "Our platform is powered by cutting-edge technologies such as React, Tailwind CSS, and TypeScript.",
     img: "/fashion.png",
@@ -89,7 +97,7 @@ export const projects = [
     link: "https://github.com/sahanpasindu99",
   },
   {
-    id: 3,
+    id: 4,
     title: "Realtime Chat App",
     des: "This chat application delivers a seamless messaging experience by leveraging optimistic updates. As users send,edit and delete messages.",
     img: "/chat-app.png",
@@ -180,12 +188,28 @@ export const companies = [
 
 export const workExperience = [
   {
+    id: 3,
+    title: "Software Engineer",
+    desc: "Contributed to the development of a web application for a client, from initial concept to deployment, using React and Node.js.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+  {
     id: 1,
+    title: "Associate Software Engineer",
+    desc: "Led the development of a web application for a client, from initial concept to deployment, using React and Node.js.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+
+  {
+    id: 2,
     title: "Software Engineer Intern",
     desc: "Engaged in the development of a real-time projects using technologies like MERN stack, NextJs, Cloud services and etc. enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
+
   // {
   //   id: 2,
   //   title: "Mobile App Dev - JSM Tech",
@@ -215,11 +239,11 @@ export const socialMedia = [
     img: "/git.svg",
     link: "https://www.github.com/sahanpasindu99",
   },
-  {
-    id: 2,
-    img: "/twit.svg",
-    link: "https://www.github.com/sahanpasindu99",
-  },
+  // {
+  //   id: 2,
+  //   img: "/twit.svg",
+  //   link: "https://www.github.com/sahanpasindu99",
+  // },
   {
     id: 3,
     img: "/link.svg",
