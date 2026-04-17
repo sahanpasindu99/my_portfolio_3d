@@ -110,14 +110,14 @@ export const projects = [
     ],
     link: "https://github.com/sahanpasindu99",
   },
-  {
-    id: 4,
-    title: "Legends Tour",
-    des: "Legends Tour is sports portfolio website that showcases match stats,tickets and schedules.",
-    img: "/legend.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-    link: "https://github.com/sahanpasindu99",
-  },
+  // {
+  //   id: 4,
+  //   title: "Legends Tour",
+  //   des: "Legends Tour is sports portfolio website that showcases match stats,tickets and schedules.",
+  //   img: "/legend.png",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+  //   link: "https://github.com/sahanpasindu99",
+  // },
 ];
 
 export const testimonials = [
