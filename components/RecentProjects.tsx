@@ -29,11 +29,11 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <img src="/bg.png" alt="Project card background" />
                 </div>
                 <img
                   src={item.img}
-                  alt="cover"
+                  alt={`${item.title} — project preview screenshot`}
                   className="absolute z-10 transform rotate-2 bottom-0"
                 />
               </div>
@@ -54,17 +54,20 @@ const RecentProjects = () => {
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
+                  {item.iconLists.map((icon, index) => {
+                    const techName = icon.replace(/^\//, "").replace(/\.(svg|png)$/, "");
+                    return (
+                      <div
+                        key={index}
+                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        style={{
+                          transform: `translateX(-${5 * index + 2}px)`,
+                        }}
+                      >
+                        <img src={icon} alt={`${techName} technology icon`} className="p-2" />
+                      </div>
+                    );
+                  })}
                 </div>
 
                 <div className="flex justify-center items-center">

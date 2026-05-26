@@ -1,9 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaSass,
   FaJs,
   FaReact,
   FaGithub,
@@ -17,37 +14,62 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiNestjs,
-  SiPostman,
   SiSpringboot,
   SiMysql,
   SiTailwindcss,
   SiCsharp,
   SiPython,
   SiRedis,
+  SiApplepay,
+  SiGooglepay,
+  SiStripe,
+  SiPaypal,
+  SiVenmo,
+  SiTypescript,
+  SiPostgresql,
+  SiSupabase,
+  SiRedux,
+  SiExpo,
+  SiJest,
 } from "react-icons/si";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const skills = [
-  { name: "React Native", icon: <FaReact className="text-blue-300" /> },
+  { name: "Apple Pay", icon: <SiApplepay className="text-gray-200" /> },
+  { name: "Google Pay", icon: <SiGooglepay className="text-blue-400" /> },
+  { name: "PayPal", icon: <SiPaypal className="text-blue-500" /> },
+  // Languages & Core
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
   { name: "Python", icon: <SiPython className="text-yellow-400" /> },
-  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-  { name: "Redis", icon: <SiRedis className="text-red-500" /> },
-  { name: "AWS", icon: <FaAws className="text-orange-400" /> },
-  { name: "React JS", icon: <FaReact className="text-blue-300" /> },
-  { name: "Next Js", icon: <SiNextdotjs className="text-gray-400" /> },
-  { name: "Node JS", icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
-  { name: "NestJS", icon: <SiNestjs className="text-red-500" /> },
-  { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-  { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "Spring", icon: <SiSpringboot className="text-green-500" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-  { name: "Tailwind", icon: <SiTailwindcss className="text-blue-400" /> },
-  { name: "C#", icon: <SiCsharp className="text-purple-500" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
+  // Frontend & Mobile
+  { name: "React JS", icon: <FaReact className="text-blue-300" /> },
+  { name: "React Native", icon: <FaReact className="text-blue-300" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-gray-400" /> },
+  { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
+  { name: "Expo", icon: <SiExpo className="text-gray-300" /> },
+  { name: "Tailwind", icon: <SiTailwindcss className="text-blue-400" /> },
+  // Backend & DB
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "NestJS", icon: <SiNestjs className="text-red-500" /> },
+  { name: "Spring", icon: <SiSpringboot className="text-green-500" /> },
+  { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
+  { name: "Supabase", icon: <SiSupabase className="text-green-500" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
+  // Cloud & Tools
+  { name: "AWS", icon: <FaAws className="text-orange-400" /> },
+  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+  { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
+  { name: "Jest", icon: <SiJest className="text-red-600" /> },
+  // Payment Integrations
+  { name: "Stripe", icon: <SiStripe className="text-purple-400" /> },
+  { name: "Venmo", icon: <SiVenmo className="text-blue-400" /> },
+  // Other
+  { name: "C#", icon: <SiCsharp className="text-purple-500" /> },
 ];
 
 const SkillsComponent = () => {

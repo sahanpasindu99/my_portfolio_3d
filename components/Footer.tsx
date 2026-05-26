@@ -56,7 +56,7 @@ const Footer = () => {
               >
                 <img
                   src={info.img}
-                  alt="icons"
+                  alt={`Sahan Nawarathne ${info.label} profile`}
                   width={20}
                   height={20}
                   className="transition-transform duration-200 hover:scale-110"

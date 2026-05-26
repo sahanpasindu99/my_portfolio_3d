@@ -1,5 +1,3 @@
-"use client";
-
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -51,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a AI solution",
+    title: "Currently building an AI-powered fintech solution at Soukpay",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -123,33 +121,33 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Sahan's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your product and brand, Sahan is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Sahan delivered our fintech integration ahead of schedule with zero production issues. His grasp of payment systems and AI-driven workflows is exceptional — he thinks in systems, not just features.",
+    name: "Sarah Thompson",
+    title: "CTO, FinBridge Solutions",
   },
   {
     quote:
-      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Sahan on our e-commerce platform was a game-changer. He built a low-latency Redis-based search engine that handles millions of products with millisecond response times. Truly impressive engineering.",
+    name: "James Carter",
+    title: "Head of Engineering, TurtlesEgg Inc.",
   },
   {
     quote:
-      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Sahan's ability to bridge complex backend infrastructure with seamless frontend experiences is rare. He transformed our B2B platform from concept to deployment with a 30% improvement in data access performance.",
+    name: "Emily Richards",
+    title: "Product Lead, Donext Pvt Ltd",
   },
   {
     quote:
-      "Collaborating with Sahan was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Sahan is one of those engineers who brings both technical depth and clear communication to every project. His Agentic AI dashboards automated our product categorisation workflows and boosted team efficiency by 20%.",
+    name: "David Nguyen",
+    title: "VP of Technology, MarketPlace Group",
   },
 ];
 
@@ -188,24 +186,35 @@ export const companies = [
 
 export const workExperience = [
   {
+    id: 5,
+    title: "Software Engineer / Consultant",
+    company: "Soukpay",
+    desc: "Engineering high-throughput fintech transaction infrastructure and real-time reward systems. Architecting Agentic AI frameworks for autonomous payment workflows and integrating Generative AI for dynamic, personalized customer experiences in a reward-based payment platform.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+  {
     id: 3,
-    title: "Software Engineer",
-    desc: "Contributed to the development of a web application for a client, from initial concept to deployment, using React and Node.js.",
+    title: "Associate Software Engineer",
+    company: "TurtlesEgg Inc.",
+    desc: "Built a socially responsible multivendor e-commerce mobile and web platform. Developed Agentic AI dashboards for automated product categorisation (+20% efficiency) and low-latency Redis Cache search across millions of products.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
   {
     id: 1,
-    title: "Associate Software Engineer",
-    desc: "Led the development of a web application for a client, from initial concept to deployment, using React and Node.js.",
+    title: "Software Engineer Intern",
+    company: "Donext Pvt Ltd",
+    desc: "Built 'MyUnivrs', a B2B platform for UK university students and businesses using React, Next.js, NestJS, and AWS. Optimised backend architectures improving data access performance by 30%.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
 
   {
     id: 2,
-    title: "Software Engineer Intern",
-    desc: "Engaged in the development of a real-time projects using technologies like MERN stack, NextJs, Cloud services and etc. enhancing interactivity.",
+    title: "AI/ML Engineer Intern",
+    company: "Contract — Remote",
+    desc: "Developed and maintained AI solutions including large language model integrations and large-scale dataset processing pipelines.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -224,29 +233,19 @@ export const workExperience = [
   //   className: "md:col-span-2", // change to md:col-span-2
   //   thumbnail: "/exp3.svg",
   // },
-  {
-    id: 4,
-    title: "AI/ML Intern",
-    desc: "Developed and maintained AI solutions (LLMs, Large Dataset Handling) as a contract-based intern in indian company.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
 ];
 
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    label: "GitHub",
     link: "https://www.github.com/sahanpasindu99",
   },
-  // {
-  //   id: 2,
-  //   img: "/twit.svg",
-  //   link: "https://www.github.com/sahanpasindu99",
-  // },
   {
     id: 3,
     img: "/link.svg",
+    label: "LinkedIn",
     link: "https://www.linkedin.com/in/sahan-naw",
   },
 ];

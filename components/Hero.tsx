@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
               <div className="relative w-36 md:w-40">
                 <img
                   src="/dp/wapp-dp.jpeg"
-                  alt="Sahan Nawarathne"
+                  alt="Sahan Nawarathne — Software Engineer & AI Consultant based in Sri Lanka"
                   className="w-full h-auto object-cover rounded-[1.58rem]"
                   draggable={false}
                 />
@@ -96,20 +96,22 @@ const Hero: React.FC = () => {
           </Button>
 
           {/* Name */}
-          <motion.p
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="uppercase tracking-widest py-2 text-xs text-center text-blue-100"
           >
             Sahan Nawarathne
-          </motion.p>
+          </motion.h1>
 
           {/* Subtitle */}
           <p className="text-center tracking-wider mb-4 mt-2 text-sm md:text-lg lg:text-4xl">
             Hi! I&apos;m{" "}
             <span className="text-green-400 font-semibold">SAHAN</span>, a
-            Software Engineer with 2 Years of experience based in SriLanka.
+            Software Engineer with 2+ Years of experience based in Sri Lanka,
+            working with internationally diverse teams across the{" "}
+            <span className="text-green-400 font-semibold">US, UK & UAE</span>.
           </p>
 
           {/* Call-to-Action Button */}
