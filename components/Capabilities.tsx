@@ -6,7 +6,7 @@ import { EmailCopyCard } from "./ui/EmailCard";
 
 export default function PortfolioGrid() {
   return (
-    <main className="min-h-screen bg-[#030014] py-20 px-6">
+    <main className="min-h-screen bg-[#030014] py-20 px-6" id="about">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
         {/* Column 1 - Staggered Down */}
         <div className="lg:mt-40">

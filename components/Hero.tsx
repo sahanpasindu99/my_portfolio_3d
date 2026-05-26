@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
               </button>
             </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=1zBwYy61sgTwXUJs1kE4E1LpI5WpinWcI"
-              download="Sahan_Nawarathne_CV"
+              href="/Sahan's CV.pdf"
+              download="Sahan_Nawarathne_CV.pdf"
               className="mt-6"
             >
               <button className="relative flex items-center gap-2 px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base lg:px-12 lg:py-3 lg:text-lg text-white font-semibold rounded-md border-2 border-green-400 hover:border-green-600 transition duration-300 ease-in-out bg-transparent">

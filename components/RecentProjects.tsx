@@ -9,7 +9,7 @@ const RecentProjects = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         Recent <span className="text-green-400">Projects</span>
       </h1>
